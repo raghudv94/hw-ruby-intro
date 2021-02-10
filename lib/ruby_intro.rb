@@ -3,7 +3,7 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  # Finding the sum of array : Checking if the given array is integer and if true, then the sum is calculated. Catches the exception if it is false and sends zero sum
   sum = 0
 
   begin
@@ -22,7 +22,7 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  # Calculates the sum of the first two largest elements in the array. This is done by assuming the first two elements as the first and second largest. And then, traversing the array to find the largest elements.
   
   array_length = arr.length()
 
@@ -64,7 +64,8 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  # Checking if the sum of any two elements in the array "arr" is equal to n. This is done by making use of a hash function to reduce the complexity to O(n). 
+  # While traversing the array, the value of n - arr[i] is checked in the hash function. If it is not present, the existing value, which is arr[i] is added to the hash function
   
   temp_hash = Hash.new
   
@@ -83,12 +84,12 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  # This is done using intrapolation
   return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  # The first part of the regex ensures only alphabets are present and the second part removes the vowels, thus leaving behind consonants
   if (s =~ /^[[a-zA-Z]&&[^AEIOUaeiou]]/)
     return true
   else
@@ -97,7 +98,7 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  # The code checks last 4 digits of the binary number. The last 3 binary digits should be 100 or 000. It should also make sure it will handle 1 or 2 binary length as well
   if (s =~ /^[01]*?((0)|(00))$/)
     return true
   else
